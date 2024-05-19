@@ -30,3 +30,5 @@ Open the `seed-generator.html` file with your favourite browser and click on the
 
 ## License
 This project is distributed under the MIT License. Go to https://opensource.org/licenses/MIT for more details.
+
+[js-sha256] - (https://github.com/emn178/js-sha256)
