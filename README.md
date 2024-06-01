@@ -14,7 +14,7 @@ The 24 words are the only way to get access to your wallet, whoever gets hold of
 
 The HTML generator is also available online at [my site](https://www.vinacc.eu/crypto/)
 
-If you want to support this work please consider a very small donation in BTC to my BTC wallet: `bc1qe28ujcyelpypw0e9kkpfrmvs0ncr2w82u3sxr0`
+If you want to support this work please consider a very small donation in BTC to my BTC wallet: `bc1qcl0svsng2yal9m5dr8k5dp0lpvrp555p83s2e9`
 
 ## Usage
 
