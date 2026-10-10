@@ -1,34 +1,67 @@
 # seed-generator
-Wallet Seed Phrase Generator
 
-This simple script in python or HTML allows you to perform the following operations to generate a Cryptocurrency Wallet easily and securely.
+Standalone English BIP39 recovery phrase generator.
+Available as a Python terminal application and a self-contained HTML page.
 
-* Simulates the random roll of 256 dice
-* Runs SHASUM256 on the obtained string and then calculates the checksum of the string
-* Displays the 24 words from the seed phrase
+## Features
 
-I recommend downloading the file seed-generator.py o seed-generator.html to a new computer not connected to the internet and running it from there. 
-Write down the 24 words in non-connected mode, perhaps on several sheets of paper, taking care to store them safely.
-
-The 24 words are the only way to get access to your wallet, whoever gets hold of them will get hold of your funds.
-
-The HTML generator is also available online at [my site](https://www.vinacc.eu/crypto/)
-
-If you want to support this work please consider a very small donation in BTC to my BTC wallet: `bc1qcl0svsng2yal9m5dr8k5dp0lpvrp555p83s2e9`
+- 24 English words from 256 bits of cryptographic entropy.
+- Python secrets and browser Web Crypto for secure randomness.
+- BIP39 checksum validation and public-vector self-tests.
+- Embedded official English wordlist.
+- No external dependencies or network requests.
+- Responsive HTML interface with show/hide, copy and clear controls.
+- Numbered Python terminal layout with optional colors.
 
 ## Usage
 
-### Python
+Python 3.8 or newer, in an interactive terminal:
 
-To run the script, download the file seed-generator.py and run it from the shell with the following command:
+    python3 seed-generator.py
 
-`python3 seed-generator.py`
+Run public self-tests without generating secrets:
 
-### HTML
+    python3 seed-generator.py --self-test
 
-Open the `seed-generator.html` file with your favourite browser and click on the Generate button.
+Disable terminal colors:
+
+    python3 seed-generator.py --no-color
+
+For HTML, download seed-generator.html and open it in a modern browser.
+Generation is blocked if Web Crypto is unavailable.
+
+## Security
+
+Anyone with the recovery phrase can access the associated wallet.
+Use a trusted device, preferably offline. Write down the words in order
+and store them securely. Avoid screenshots, email and cloud storage.
+
+Clipboard managers, synchronization and terminal scrollback may retain
+copies. Hiding words does not erase them from memory. Secure memory
+erasure cannot be guaranteed.
+
+Checksum validation confirms the BIP39 format, not device security or
+compatibility with every wallet. For significant funds, prefer generating
+the recovery phrase directly on a hardware wallet.
+
+Earlier versions used random generators unsuitable for cryptographic
+secrets. If used for a funded wallet, migrate to a wallet with a newly
+generated recovery phrase.
+
+## Signing key
+
+The current public signing key is included in pub_key.asc.
+
+Fingerprint:
+37A4179C7B80C50304231586C97F93FDD23170E8
+
+This replaces the previous key, whose private part is no longer available.
+Never commit private keys or generated recovery phrases.
+
+## Author
+
+vinacc — va@vinacc.eu
 
 ## License
-This project is distributed under the MIT License. Go to https://opensource.org/licenses/MIT for more details.
 
-[js-sha256] - (https://github.com/emn178/js-sha256)
+MIT License.
